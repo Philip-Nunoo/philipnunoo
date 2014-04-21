@@ -17,7 +17,7 @@ title: phanunoo
 					<p>
 					{{post.summary}}
 					</p>
-					<p><a href="{{ post.url }}">Continue Reading...</a></p>
+					<p><a href="{{ site.baseurl }}/{{ post.url }}">Continue Reading...</a></p>
 				</div>
 
 			</div><!-- /row -->
