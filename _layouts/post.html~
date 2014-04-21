@@ -13,7 +13,7 @@ layout: default
 				<div>
 				{{ content }}
 				</div>
-				<p><a href="blog.html"># Back</a></p>
+				<p><a href="/blog.html"># Back</a></p>
 			</div>
 		</div><!-- /row -->
 	</div> <!-- /container -->
