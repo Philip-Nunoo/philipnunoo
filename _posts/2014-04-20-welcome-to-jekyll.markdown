@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2014-04-20 10:50:11
+categories: jekyll update
+summary: "This post is the default <a href='http://jekyllrb.com' target='_blank'>jekyll</a> 
+post you get after installing Jekyll.
+I've left this here to show I used jekyll. And also so how easy it was for me to 
+build this page in a day(-12 hrs)."
+---
+
+You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
+To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby linenos %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+
+[jekyll-gh]: https://github.com/mojombo/jekyll
+[jekyll]:    http://jekyllrb.com

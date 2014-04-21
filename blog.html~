@@ -7,7 +7,7 @@ title: phanunoo
 	<!-- +++++ First Post +++++ -->
 	
     {% for post in site.posts %}
-	<div id="{% cycle 'grey', 'white' %}">
+	<div id="grey">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
