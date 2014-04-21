@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Android Awesome Sugar ORM!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/hover.zoom.js"></script>
+    <script src="/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+	<div class="site">
+		<!-- Static navbar -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">PhANunoo</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<!--<li><a href="work.html">Work</a></li>-->
+						<li><a href="/about.html">About</a></li>
+						<li><a href="/blog.html">Blog</a></li>
+						<li><a href="/contact.html">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		<!-- +++++ Post +++++ -->
+<div id="white">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<p><img src="/img/user.png" width="50px" height="50px"> <ba>Philip Nunoo</ba></p>
+				<p><bd>20 Apr 2014</bd></p>
+				<h4>Android Awesome Sugar ORM!</h4>
+				<div>
+				<p>
+<h1>ORM</h1>
+ORM – Object relational mapping has been around for quite some time now. 
+Basically it’s a piece of software (regardless of targeted platform), 
+which simplifies the connection between objects (as in OOP) and data in database 
+(mostly used is tables based relational database), and it exists in order to help simplify 
+bridging the gap between the two in our development process.
+</p>
+
+<p>
+There is a whole lot of arguments out there talking about the importance 
+of using ORM in android. In my opinion I think it's good and saves time
+in writing codes in creating databases and tables within your android application.
+
+</p>
+
+<p>
+With my search I found a whole lot of ORMs which I could choose from.
+<ul>
+<li>GreenDAO</li>
+<li>ORMDroid </li>
+<li>activeandroid</li>
+<li></li>
+</ul>
+Most sites pointing to the use of ORMlite to be the best of all.
+</p>
+
+<p>
+ORMlite took some of the coding away but still had some of the same
+old things I was doing so I had to either stop it and go with the old method(which 
+I mostly used without any trouble) or continue searching.
+</p>
+
+<p>And I stumbled upon [sugar][sugar]. I found it amazing and nice since It 
+actually tried to mimick what is done in Rails(which I use for some of my
+server coding). And this is how I went.
+</p>
+
+<p>
+<h1>Download Sugar</h1>
+You could actually download sugar as a .jar file or a library and
+include it in your android project.
+</p>
+
+<p>
+I choose not to speak for satyan the creator of sugar. But from what I 
+see sugar chooses to mimick ORM is played in Rails which makes me very excited.
+Cause I'm falling in love with Rails and their migrations.
+</p>
+
+<p>
+<h1>Configuration</h1>
+One nice thing I realized with sugar is their way they handle everything, 
+taking away all the coding which needs to be done in setting up or creating
+an Sqlite database and its associated table and field. 
+<p>
+Ok so this is the configuration done within your AndroidManifest.xml
+Just include "android:name=com.orm.SugarApp" in your application tag.
+
+And add some few meta-data tag in your application tag to get it started.
+</p>
+
+<div class="highlight"><pre><code class="xml"><span class="lineno"> 1</span> <span class="nt">&lt;application</span> <span class="na">android:label=</span><span class="s">&quot;@string/app_name&quot;</span> <span class="na">android:icon=</span><span class="s">&quot;@drawable/icon&quot;</span>
+<span class="lineno"> 2</span> <span class="na">android:name=</span><span class="s">&quot;com.orm.SugarApp&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 3</span> .
+<span class="lineno"> 4</span> .
+<span class="lineno"> 5</span> <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;DATABASE&quot;</span> <span class="na">android:value=</span><span class="s">&quot;sugar_example.db&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 6</span> <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;VERSION&quot;</span> <span class="na">android:value=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 7</span> <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;QUERY_LOG&quot;</span> <span class="na">android:value=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 8</span> <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">&quot;DOMAIN_PACKAGE_NAME&quot;</span> <span class="na">android:value=</span><span class="s">&quot;com.example&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 9</span> .
+<span class="lineno">10</span> .
+<span class="lineno">11</span> <span class="nt">&lt;/application&gt;</span>
+</code></pre></div>
+
+</p>
+<p>
+<h1><i>meta-data</i> tags</h1>
+From sugar orm page these are the definitions of the meta data tags.
+<table>
+<thead>
+<tr><th>Metadata</th><th>Description</th></tr>
+</thead>
+<tr><td>DATABASE</td><td>Name of the generated sqlite database file</td></tr>
+<tr><td>VERSION</td><td>Version of your database schema</td></tr>
+<tr><td>QUERY_LOG</td><td>Logs the generated Select queries.</td></tr>
+<tr><td>DOMAIN_PACKAGE_NAME</td><td>Specify a package name where your domain/entity classes are present. This helps in smoother table creation</td></tr>
+</table>
+
+</p>
+<p>
+With this you are half way with creating your sqlite database in it's now time to
+create the entities which basically represent your Tables.
+</p>
+<p>
+I always like to organize my stuff, so I added a new package naming it models within my default package name
+And in my "DOMAIN_PACKAGE_NAME", I refrenced to that package.
+</p>
+Now to create our entities.
+
+<div class="highlight"><pre><code class="java"><span class="lineno"> 1</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="kd">extends</span> <span class="n">SugarRecord</span><span class="o">&lt;</span><span class="n">Book</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="lineno"> 2</span>  <span class="n">String</span> <span class="n">title</span><span class="o">;</span>
+<span class="lineno"> 3</span>  <span class="n">String</span> <span class="n">edition</span><span class="o">;</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span>  <span class="kd">public</span> <span class="nf">Book</span><span class="o">(</span><span class="n">Context</span> <span class="n">ctx</span><span class="o">){</span>
+<span class="lineno"> 6</span>      <span class="kd">super</span><span class="o">(</span><span class="n">ctx</span><span class="o">);</span>
+<span class="lineno"> 7</span>  <span class="o">}</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span>  <span class="kd">public</span> <span class="nf">Book</span><span class="o">(</span><span class="n">Context</span> <span class="n">ctx</span><span class="o">,</span> <span class="n">String</span> <span class="n">title</span><span class="o">,</span> <span class="n">String</span> <span class="n">edition</span><span class="o">){</span>
+<span class="lineno">10</span>      <span class="kd">super</span><span class="o">(</span><span class="n">ctx</span><span class="o">);</span>
+<span class="lineno">11</span>      <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">;</span>
+<span class="lineno">12</span>      <span class="k">this</span><span class="o">.</span><span class="na">edition</span> <span class="o">=</span> <span class="n">edition</span><span class="o">;</span>
+<span class="lineno">13</span>  <span class="o">}</span>
+<span class="lineno">14</span> <span class="o">}</span>
+</code></pre></div>
+
+
+<p>
+As at version 1.2 which existed at the time of this blog you'll have to do.
+And you'll have to maintain the empty constructor
+</p>
+<div>
+
+<div class="highlight"><pre><code class="java"><span class="lineno"> 1</span> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="kd">extends</span> <span class="n">SugarRecord</span><span class="o">&lt;</span><span class="n">Book</span><span class="o">&gt;</span> <span class="o">{</span>
+<span class="lineno"> 2</span>      <span class="n">String</span> <span class="n">title</span><span class="o">;</span>
+<span class="lineno"> 3</span>      <span class="n">String</span> <span class="n">edition</span><span class="o">;</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span>      <span class="kd">public</span> <span class="nf">Book</span><span class="o">(){}</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span>      <span class="kd">public</span> <span class="nf">Book</span><span class="o">(</span><span class="n">String</span> <span class="n">title</span><span class="o">,</span> <span class="n">String</span> <span class="n">edition</span><span class="o">){</span>
+<span class="lineno"> 8</span>          <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">;</span>
+<span class="lineno"> 9</span>          <span class="k">this</span><span class="o">.</span><span class="na">edition</span> <span class="o">=</span> <span class="n">edition</span><span class="o">;</span>
+<span class="lineno">10</span>      <span class="o">}</span>
+<span class="lineno">11</span> <span class="o">}</span>
+</code></pre></div>
+
+</div>
+
+<p>Awesome, that why I say it's awesome sugar</p>
+
+<p>Just by doing this our Table Book would be created when our application is run. Amazing isn't it.</p>
+
+<p>Better than what I used to do at first</p>
+
+<p>
+<h1>Basic Usage - CRUD</h1>
+Performing CRUD operations are very simple. Just as calling a method on your class.
+By extending SugarRecord<E> you get methods which could do all your CRUD operations.
+</p>
+
+<p>
+Save Entity:
+<div>
+
+<div class="highlight"><pre><code class="java"><span class="lineno">1</span> <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="o">(</span><span class="n">ctx</span><span class="o">,</span> <span class="s">&quot;Title&quot;</span><span class="o">,</span> <span class="s">&quot;Description&quot;</span><span class="o">)</span>
+</code></pre></div>
+
+</div>
+Load Entity:
+<div>
+
+<div class="highlight"><pre><code class="java"><span class="lineno">1</span> <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">Book</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+</code></pre></div>
+
+</div>
+Update Entity:
+<div>
+
+<div class="highlight"><pre><code class="java"><span class="lineno">1</span> <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">Book</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="lineno">2</span> <span class="n">book</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="s">&quot;new title&quot;</span><span class="o">;</span>
+<span class="lineno">3</span> <span class="n">book</span><span class="o">.</span><span class="na">edition</span> <span class="o">=</span> <span class="s">&quot;new edition&quot;</span><span class="o">;</span>
+<span class="lineno">4</span> <span class="n">book</span><span class="o">.</span><span class="na">save</span><span class="o">();</span>
+</code></pre></div>
+
+</div>
+Delete Entity:
+<div>
+
+<div class="highlight"><pre><code class="java"><span class="lineno">1</span> <span class="n">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">Book</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="lineno">2</span> <span class="n">book</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span>
+</code></pre></div>
+
+</div>
+Bulk Operations:
+<div>
+
+<div class="highlight"><pre><code class="java"><span class="lineno">1</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Book</span><span class="o">&gt;</span> <span class="n">books</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="na">listAll</span><span class="o">(</span><span class="n">Book</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="lineno">2</span> <span class="n">Book</span><span class="o">.</span><span class="na">deleteAll</span><span class="o">(</span><span class="n">Book</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="c1">// clear everything</span>
+</code></pre></div>
+
+</div>
+</p>
+
+<p>That's it now we have all the methods necessary to call to perform operations on
+our database. And I realized that I didn't need to write all the SQL query
+statements needed to do this.
+</p>
+
+<p>Check out the <a href="http://satyan.github.io/sugar/">sugar</a> for more info on how to use sugar migrations and 
+build queries. Fork sugar on their page on <a href="https://github.com/satyan/sugar/">github</a>.</p>
+
+				</div>
+				<p><a href="/blog.html"># Back</a></p>
+			</div>
+		</div><!-- /row -->
+	</div> <!-- /container -->
+</div><!-- /white -->
+
+		
+	<!-- +++++ Footer Section +++++ -->
+	
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<h4>My Bunker</h4>
+						<p>
+							P.O.Box 
+							WJ 868 ,
+							Ghana-Accra-Weija
+							<br/>+233 20 6242 008
+							<br/>
+							Accra, Ghana.
+						</p>
+					</div><!-- /col-lg-4 -->
+				
+					<div class="col-lg-4">
+						<h4>My Links</h4>
+						<p>
+							<a href="#" target="">Google +</a><br/>
+							<a href="#" target="">Twitter</a><br/>
+							<a href="#" target="">Facebook</a>
+						</p>
+					</div><!-- /col-lg-4 -->
+				
+					<div class="col-lg-4">
+						<h4>About Stanley</h4>
+						<p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
+						<p>
+							<a href="https://github.com/philip-nunoo" target="_blank">github.com/philip-nunoo</a><br />
+							<a href="https://twitter.com/philip_nunoo" target="_blank">twitter.com/philip_nunoo</a><br />
+						</p>
+					</div><!-- /col-lg-4 -->
+			
+				</div>
+		
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/js/bootstrap.min.js"></script>
+	</div>
+</body>
+</html>

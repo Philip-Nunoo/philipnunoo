@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Starting with Jekyll!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/hover.zoom.js"></script>
+    <script src="/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+	<div class="site">
+		<!-- Static navbar -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">PhANunoo</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<!--<li><a href="work.html">Work</a></li>-->
+						<li><a href="/about.html">About</a></li>
+						<li><a href="/blog.html">Blog</a></li>
+						<li><a href="/contact.html">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+		<!-- +++++ Post +++++ -->
+<div id="white">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<p><img src="/img/user.png" width="50px" height="50px"> <ba>Philip Nunoo</ba></p>
+				<p><bd>20 Apr 2014</bd></p>
+				<h4>Starting with Jekyll!</h4>
+				<div>
+				<p><a href="http://jekyllrb.com">Jekyll</a> is a static website generator developed in <a href="http://www.ruby-lang.org/en">Ruby</a>.
+I was excited to know at first that you could actually host your site of Github pages with
+Jekyll. And this gives an easier hosting method.
+<p>
+Mr. Obama even used <a href="http://jekyllrb.com">Jekyll</a> during his campaign.
+</p>
+<p>
+Now i&#39;ll talk about how to setup Jekyll and some of the challenges I faced
+</p></p>
+
+<div>
+<h1>Getting Started</h1>
+I started developing with Ruby on Rails so for the requirements of ruby I already
+have it installed, with gem also installed.
+The setup process is quite easy and the only problem which I faced was 
+actually from my end and it was with the proxy. 
+<p>
+The full process of installing and starting Jekyll shown here:
+</p>
+</div>
+
+<div>
+
+<div class="highlight"><pre><code class="sh">~<span class="nv">$gem</span> install jekyll
+~<span class="nv">$jekyll</span> new my-site
+~<span class="nv">$cd</span> my-site
+</code></pre></div>
+
+</div>
+
+<p>
+As I said the only problem which arose initially was me being able to 
+get jekyll itself. I usually move around so I often face proxy changes here
+and there.
+</p>
+
+<p>
+So I had to fixed that on my terminal by doing the following before running
+gem install jekyll
+</p>
+
+<div>
+
+<div class="highlight"><pre><code class="sh">~<span class="nv">$export</span> <span class="nv">http_proxy</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+~<span class="nv">$export</span> <span class="nv">https_proxy</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+</code></pre></div>
+
+</div>
+
+<p>Ok thats it so I had jekyll ready to use</p>
+
+<p>You can run gem list and find out if you have jekyll in there.</p>
+
+<div class="highlight"><pre><code class="sh">~<span class="nv">$gem</span> list
+</code></pre></div>
+
+<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/mojombo/jekyll">Jekyll&#39;s GitHub repo</a>.</p>
+
+				</div>
+				<p><a href="/blog.html"># Back</a></p>
+			</div>
+		</div><!-- /row -->
+	</div> <!-- /container -->
+</div><!-- /white -->
+
+		
+	<!-- +++++ Footer Section +++++ -->
+	
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<h4>My Bunker</h4>
+						<p>
+							P.O.Box 
+							WJ 868 ,
+							Ghana-Accra-Weija
+							<br/>+233 20 6242 008
+							<br/>
+							Accra, Ghana.
+						</p>
+					</div><!-- /col-lg-4 -->
+				
+					<div class="col-lg-4">
+						<h4>My Links</h4>
+						<p>
+							<a href="#" target="">Google +</a><br/>
+							<a href="#" target="">Twitter</a><br/>
+							<a href="#" target="">Facebook</a>
+						</p>
+					</div><!-- /col-lg-4 -->
+				
+					<div class="col-lg-4">
+						<h4>About Stanley</h4>
+						<p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
+						<p>
+							<a href="https://github.com/philip-nunoo" target="_blank">github.com/philip-nunoo</a><br />
+							<a href="https://twitter.com/philip_nunoo" target="_blank">twitter.com/philip_nunoo</a><br />
+						</p>
+					</div><!-- /col-lg-4 -->
+			
+				</div>
+		
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="/js/bootstrap.min.js"></script>
+	</div>
+</body>
+</html>
