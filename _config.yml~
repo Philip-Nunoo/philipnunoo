@@ -1,4 +1,30 @@
-name: phanunoo
-markdown: redcarpet
-pygments: true
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
 baseurl: /philipnunoo
+
+# Setup
+title:            Philip A. Nunoo
+tagline:          'thanks for stopping by'
+description:      'Welcome to my 127.0.0.1 (home) on the internet.'
+url:              http://lanyon.getpoole.com
+
+author:
+  name:           'Philip Nunoo'
+  url:            https://twitter.com/Philip-Nunoo
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/Philip-Nunoo
+  
+facebook:
+  url:            http://facebook.com
+	
+

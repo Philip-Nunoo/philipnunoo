@@ -1,20 +1,25 @@
 ---
 layout: default
-
 ---
-<!-- +++++ Post +++++ -->
-<div id="white">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<p><img src="{{ site.baseurl }}/img/user.png" width="50px" height="50px"> <ba>Philip Nunoo</ba></p>
-				<p><bd>{{ page.date | date_to_string }}</bd></p>
-				<h4>{{ page.title }}</h4>
-				<div>
-				{{ content }}
-				</div>
-				<p><a href="{{ site.baseurl }}/blog.html"># Back</a></p>
-			</div>
-		</div><!-- /row -->
-	</div> <!-- /container -->
-</div><!-- /white -->
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
