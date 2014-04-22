@@ -29,4 +29,10 @@ facebook:
   
 twitter:
   url:            http://twitter.com/philip_nunoo
+  
+analytics :
+  provider : google 
+  google : 
+      tracking_id : 'UA-50240657-1'
+
 
