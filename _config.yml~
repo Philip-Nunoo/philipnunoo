@@ -11,6 +11,7 @@ title:            Philip A. Nunoo
 tagline:          'thanks for stopping by'
 description:      'Welcome to my 127.0.0.1 (home) on the internet.'
 url:              http://lanyon.getpoole.com
+safe: true
 
 author:
   name:           'Philip Nunoo'
@@ -22,7 +23,7 @@ paginate:         5
 version:          2.0.0
 
 github:
-  repo:           https://github.com/Philip-Nunoo
+  repo:           https://github.com/Philip-Nunoo/philipnunoo.git
   
 facebook:
   url:            http://facebook.com
@@ -35,6 +36,5 @@ analytics :
   google : 
       tracking_id : 'UA-50240657-1'
 
-safe: true
 
 
