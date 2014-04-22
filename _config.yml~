@@ -33,6 +33,8 @@ twitter:
 analytics :
   provider : google 
   google : 
-      tracking_id : 'UA-39878123-1'
+      tracking_id : 'UA-50240657-1'
+
+safe: true
 
 
