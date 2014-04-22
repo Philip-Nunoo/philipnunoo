@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Android Awesome Sugar ORM!"
+date:   2014-04-20 10:50:11
+categories: android programming
+---
+
+<p>
+<h1>Download Sugar</h1>
+You could actually download sugar as a .jar file or a library and
+include it in your android project.
+</p>
+
+<p>
+I choose not to speak for satyan the creator of sugar. But from what I 
+see sugar chooses to mimick ORM is played in Rails which makes me very excited.
+Cause I'm falling in love with Rails and their migrations.
+</p>
+
+<p>
+<h1>Configuration</h1>
+One nice thing I realized with sugar is their way they handle everything, 
+taking away all the coding which needs to be done in setting up or creating
+an Sqlite database and its associated table and field. 
+<p>
+Ok so this is the configuration done within your AndroidManifest.xml
+Just include "android:name=com.orm.SugarApp" in your application tag.
+
+And add some few meta-data tag in your application tag to get it started.
+</p>
+{% highlight xml %}
+<application android:label="@string/app_name" android:icon="@drawable/icon"
+android:name="com.orm.SugarApp">
+.
+.
+<meta-data android:name="DATABASE" android:value="sugar_example.db" />
+<meta-data android:name="VERSION" android:value="2" />
+<meta-data android:name="QUERY_LOG" android:value="true" />
+<meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example" />
+.
+.
+</application>
+{% endhighlight %}
+</p>
+<p>
+<h1>
+meta-data tags</h1>
+</p>
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+
+[jekyll-gh]: https://github.com/mojombo/jekyll
+[jekyll]:    http://jekyllrb.com
+[ruby]:      http://www.ruby-lang.org/en
