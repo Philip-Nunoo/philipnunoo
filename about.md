@@ -10,10 +10,14 @@ title: About
 
 A passionate application Developer in Php, Ruby, Python, Javascript etc.
 
+<p>
+Contact me to do your development for you.
+</p>
 Find me on:
-* [Facebook](http://facebook.com)
-* [Twitter](http://twitter.com/philip_nunoo)
-* [Send me a mail](n)
+* [Facebook]({{site.facebook.url}})
+* [Twitter]({{site.twitter.url}})
+* [Send me a mail]({{baseurl}}/contact.html)
+* [Github]({{site.github.repo}})
 
 
 Thanks for stopping by.
